@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;400;700&display=swap');
+
+*{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+}
+
+html{
+      font-size: 10px;
+      font-family: 'Montserrat', sans-serif
+}
+
+
+a{
+      text-decoration: none;
+}
+span{
+      color: orangered;
+}
+p{
+      font-size:1.4rem;
+      margin-top:5px;
+      line-height:2.5rem;
+      font-weight:300;
+      padding:0 3rem;
+      letter-spacing: .05rem;
+}
+.section-title{
+      font-size:4rem;
+      font-weight:300;
+      color:black;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: .2rem;
+      text-align: center;
+}
+
+.container{
+      min-height:100vh;
+      width:100%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+}
+/* hero section */
+#hero{
+      background-image: url('https://i.pinimg.com/originals/e3/21/6b/e3216b575d5e92031eaf5c1a067f9d31.jpg ');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: top center;
+      position: relative;
+      z-index: 1;
+}
+
+#hero::after{
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      background-color: black;
+      opacity: 0.4;
+      z-index: -1;
+}
+
+
+
+
+#hero h1{
+      color: transparent;
+      font-size:3rem;
+      display: block;
+      position: relative;
+      width: fit-content;
+      animation:text_reveal .5s ease forwards;
+      animation-delay: 1s;
+}
+#hero h1:nth-child(1){
+      animation-delay:1s;
+}
+#hero h1:nth-child(2){
+      animation-delay:2s;
+}
+#hero h1:nth-child(3){
+      animation: text_reveal_name .5s ease forwards;
+      animation-delay:3s;
+}
+
+#hero h1 span{
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 0;
+      background-color: orangered;
+      animation: text_reveal_box 1s ease;
+      animation-delay: .3s;
+}
+
+#hero h1:nth-child(1) span{
+      animation-delay:.5s;
+}
+#hero h1:nth-child(2) span{
+      animation-delay:1.5s;
+}
+#hero h1:nth-child(3) span{
+      animation-delay:2.5s;
+}
+
+#hero .hero{
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 50px;
+      justify-content: flex-start;
+}
+
+#hero .cta{
+      display: inline-block;
+      padding: 10px 30px;
+      color:orangered;
+      background-color:transparent;
+      border: 2px solid orangered;
+      border-radius: 5px;
+      font-size:2rem;
+      text-transform: uppercase;
+      letter-spacing:1rem;
+      margin-top: 36px;
+      transition: 0.3s ease;
+      transition-property: background-color,color;
+}
+
+#hero .cta:hover{
+      color :#fff;
+      background-color:orangered;
+}
+
+/* end of hero section */
+
+
+/* Services Section */
+
+#services .services{
+      flex-direction: column;
+      text-align: center;
+      max-width: 1500px;
+      margin: 0 auto;
+      padding: 100px 0;
+}
+
+
+
+
+
+
+#services .service-bottom{
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+}
+
+#services .service-item{
+      flex-basis: 80%;
+      display: flex;
+      align-items: flex-start;
+      justify-content:center;
+      flex-direction: column;
+      padding: 30px;
+      border-radius: 10px;
+      margin:10px 5%;
+      background-image: url('https://i.pinimg.com/originals/e3/21/6b/e3216b575d5e92031eaf5c1a067f9d31.jpg');
+      background-size: cover;
+      box-shadow: 0px 0px 10px 1px #c7c7c7;
+      position: relative;
+      z-index: 1;
+}
+
+/* #services .service-item::after{
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color:black;
+      border-radius: 10px;
+      opacity: .3;
+      z-index: -1;
+} */
+
+#services .service-item:hover{
+      cursor: pointer;
+      transform: scale(1.02, 1.02);
+      transition: 0.3s ease;
+
+}
+
+#services .service-item .icon img{
+      margin-bottom:10px;
+      width:8rem;
+      height:8rem;
+}
+
+
+
+/* End Services Section */
+
+/* Project Section */
+
+#projects .projects{
+      flex-direction: column;
+      max-width: 1200;
+      margin: 0 auto;
+      padding-bottom: 100px;
+      text-align: center;
+
+}
+
+#projects .projects-header h1{
+      margin-bottom: 50px;
+}
+
+#projects .all-projects{
+      display:flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+}
+#projects .project-item{
+      display:flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      width: 80%;
+      margin: 20px auto;
+      overflow: hidden;
+      border-radius: 10px;
+      border: black solid;
+}
+
+#projects .project-info h3 , p{
+      margin-top:5px;
+} 
+
+#projects .project-info{
+      padding: 30px;
+      background-color:#738090;
+      height:100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      overflow: hidden;
+      color:white;
+      text-align:center;
+      flex-basis: 50%;
+
+}
+
+
+#projects .project-img{
+      flex-basis: 50%;
+      padding: 30px;
+      height:200px;
+      flex-direction: column;
+      object-fit: cover;
+      height: 200px;
+      overflow: hidden;
+      transition: .3s ease;
+}
+#projects .project-img img{
+      height: 200px;
+}
+
+
+#projects .project-item:hover .project-img{
+      transform: scale(1.1);
+}
+#projects .project-item:hover{
+      cursor: pointer;
+}
+
+
+
+/* End Project Section */
+
+
+
+/* Keyframes */
+@keyframes text_reveal_box{
+      50%{
+            width: 100%;
+            left: 0;
+      }
+      100% {
+            width: 0;
+            left: 100%;
+      }
+}
+
+@keyframes text_reveal {
+      100%{
+            color:white;
+      }
+}
+@keyframes text_reveal_name {
+      100%{
+            color:orangered;
+      }
+}
+/* end of keyframes */
